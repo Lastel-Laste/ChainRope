@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Box2D</title>
+    <style>
+      body {
+        background-color: black;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body onload="init();">
+    <canvas id="canvas" style="background-color:black;" ></canvas>
+  </body>
+    <script type="text/javascript" src="box2dWEB/Box2D.js"></script>
+    <script type="text/javascript" src="ChainRope.js"></script>
+    <script>
+
+        // 캔버스 초기화
+        const canvas = document.getElementById("canvas");
+        canvas.width = window.innerWidth -4;
+        canvas.height = window.innerHeight -4;
+        const ctx = canvas.getContext("2d");
+
+        // 캔버스 크기 조정 이벤트 리스너
+        window.addEventListener("resize", () => {
+        canvas.width = window.innerWidth -4;
+        canvas.height = window.innerHeight -4;
+        });
+
+    </script>
+
+</html>
